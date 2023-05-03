@@ -172,7 +172,7 @@ if(!class_exists('mh_slider_cpt')){
                'hierarchical'       => false,
                'capability_type'    => 'post',
                'query_var'          => true,
-               'show_in_menu'       => true,
+               'show_in_menu'       => false,
                'show_ui'            => true,
                'publicly_queryable' => true,
                'menu_position'      => 5,

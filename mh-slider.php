@@ -62,6 +62,12 @@ if(!class_exists('MH_Slider')){
 			require_once(MH_SLIDER_PATH . 'metaboxes/classes/mh_slider_cpt_metaboxex.php');
 			$mh_Metabox = new mh_slider_cpt_metaboxex();
 
+			//admin menu pages class call
+			require_once(MH_SLIDER_PATH .'admin/classess/admin_menu.php');
+			$mh_slider_settings = new admin_menu();
+
+
+
 		}
 
 		/**
