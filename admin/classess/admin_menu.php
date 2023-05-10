@@ -66,7 +66,14 @@ if(!class_exists('admin_menu'))
 
     public function mh_slider_settings_page()
     {
-            echo "All About Slider Settings Pages";
+       if( ! current_user_can( 'manage_options' ) ) return;
+
+        if( isset( $_GET['settings-updated'] ) )
+            add_settings_error( 'mh_slider_options', 'mh_slider_message', 'Settings Saved', 'success' );
+   
+        settings_errors( 'mh_slider_options' );
+
+        require_once(MH_SLIDER_PATH .'views/settings-page.php');
     }
 
    }
